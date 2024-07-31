@@ -19,15 +19,15 @@ namespace ConsoleApp6
                 new StudentDTO { Name = "Test", DepartmentName = "Biology", Grade = 9.1 },
 
             };
-
+            // create department object
             List<DepartmentDTO> department = new List<DepartmentDTO>()
             {
                 new DepartmentDTO { Name = "IT", FacultyName = "FSHN", NoCurrentStudent = students.Count(), NoMaxStudent = 100 }
             };
             Student.Student addStudent = new Student.Student();
-            addStudent.CreateStudent(students);
-            addStudent.RemoveStudent();
-            addStudent.GetAllStudents();
+            addStudent.CreateStudent(students); // call method Create Student to create object
+            addStudent.RemoveStudent();// after students are created, remove all students that has grade < 5.6
+            addStudent.GetAllStudents(); // return all other users wheren grade  > 5.6
         }
     }
 }
